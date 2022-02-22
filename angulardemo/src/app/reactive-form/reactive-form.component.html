@@ -1,0 +1,69 @@
+<app-home></app-home>
+
+<div class="container mt-5">
+    <h1>Register Form</h1>
+    <div class="row">
+        <div class="col-sm-12">
+            <form [formGroup]="reactiveForm">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label>Name<span class="text-danger">*</span></label>
+                            <input   required maxlength="10" type="text" formControlName="userFirstName" name="userFirstName" class="form-control" placeholder="Name" />
+                            <span *ngIf=" submitted || forms['userFirstName'].dirty || forms['userFirstName'].touched&&forms['userFirstName'].invalid" class="info-msg text-danger">
+                            <small *ngIf= "forms['userFirstName'].errors && forms['userFirstName'].errors?.['required']"> User  name is required </small>
+                            <!-- <small *ngIf="forms['userFirstName'].errors && forms['userFirstName'].errors?.['maxlength']"> name must be 10 character</small> -->
+                            <small *ngIf=" forms['userFirstName.maxlength'].errors">First name should contain max  10 character</small>
+                        </span>
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label>Address<span class="text-danger">*</span></label>
+                            <input type="text" formControlName="address" class="form-control" placeholder="Address" />
+                            <span *ngIf=" submitted || forms['address'].dirty || forms['userFirstName'].touched&&forms['address'].invalid" class="info-msg text-danger">
+                            <small *ngIf= "forms['address'].errors && forms['address'].errors?.['required']"> User address is required </small>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label>Email<span class="text-danger">*</span></label>
+                            <input type="email" formControlName="email" class="form-control" placeholder="email" />
+                            <span *ngIf=" submitted || forms['email'].dirty || forms['email'].touched&&forms['email'].invalid "class="info-msg text-danger">
+                            <small *ngIf= "forms['email'].errors && forms['email'].errors?.['required']"> User  email is required </small>
+                        </span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label>Password<span class="text-danger">*</span></label>
+                            <input type="password" formControlName="password" class="form-control" placeholder="password" />
+                            <span *ngIf=" submitted || forms['password'].dirty || forms['password'].touched && forms['password'].invalid" class="info-msg text-danger">
+                            <small *ngIf= "forms['password'].errors && forms['password'].errors?.['required']"> User  password is required </small>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button class="btn btn-success" (click)="onSubmitForm(reactiveForm)" type="button" >Submit Value</button>
+                    </div>
+                </div>
+
+                
+            </form>
+        </div>
+    </div>
+</div>

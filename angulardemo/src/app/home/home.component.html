@@ -1,56 +1,12 @@
-<!-- <h1>Hello Sharad</h1> -->
-<!-- <p><a href="javascript:void(0);" (click)="onRouteChange();">Hello from home</a></p>
-<p><a href="javascript:void(0);"(click)="onNavigateById('678');">On navigate by id</a></p> -->
-<router-outlet></router-outlet>
-<div class="table">
-<table style="width:100%">
-<tr class="bg-primary">
-    <th>S.N</th>
-    <th>Id</th>
-    <th>Name</th>
-    <th>Address</th>
-    <th>Age</th>
-    <th>Class</th>
-    <th>Action</th>
-    
-</tr>
-<tbody>
-<tr *ngFor="let data of tableData;let i=index">
-    <td>{{i+1}}</td>
-    <td>{{data.Id}}</td>
-    <td>{{data.Name}}</td>
-    <td>{{data.Address}}</td>
-    <td>{{data.Age}}</td>
-    <td>
-        {{data.class}}
-    </td>
-    <td>
-        <input type="button" value="edit" (click)="onDetailView(data.Id,data.Name,data.Address,data.Age,data.class)">
-
-    </td>
-</tr>
-<!-- 
-<tr>
-    <td>2</td>
-    <td>Bharat</td>
-    <td>pyuthan</td>
-    <td>33</td>
-    <td>
-        <input type="button" value="edit" (click)="onNavigateById('2')">
-    </td>
-</tr>
-
-<tr>
-    <td>3</td>
-    <td>Ram</td>
-    <td>dang</td>
-    <td>23</td>
-    <td>
-        <input type="button" value="edit" (click)="onNavigateById('3')">
-    </td>
-</tr> -->
-
-</tbody>
-
-</table>
-</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+      
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <button class="nav-link" (click)="onTable()" data-toggle="tooltip" data-placement="button" title="click on table">Table</button>
+          <button class="nav-link " (click)="onReactiveForm()" data-toggle="tooltip" data-placement="buttom" title="click on form">ReactiveForm</button>
+          <button class="nav-link " (click)="onTempelateForm()" data-toggle="tooltip" data-placement="buttom" title="click on form">TempelateForm</button>
+        </div>
+      </div>
+    </div>
+  </nav>

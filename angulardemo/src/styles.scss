@@ -1,11 +1,14 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
+// @import '~bootstrap/dist/css/bootstrap.min.css';
 table, th, td {
     border:1px solid black;
   }
-//   .table{
-//       position: absolute;
-//       align-items: center;
-//   }
+  .table{
+      position: absolute;
+      top:100px;
+  }
   p{
       text-align: center;
   }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
